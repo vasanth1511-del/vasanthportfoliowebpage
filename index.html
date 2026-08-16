@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#07090f">
+  <meta name="description" content="Vasanth M — Frontend Web Developer and CSE student building clean, responsive, modern websites.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Vasanth M — Frontend Web Developer">
+  <meta property="og:description" content="Clean, responsive and modern web experiences by Vasanth M.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Vasanth M — Frontend Web Developer</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="boot-screen" id="bootScreen" aria-hidden="true">
+    <div class="boot-panel">
+      <div class="boot-brand"><span>VM</span><b>VASANTH.OS</b></div>
+      <div class="boot-log" id="bootLog"></div>
+      <div class="boot-bar"><span id="bootBarFill"></span></div>
+      <p class="boot-ready" id="bootReady">SYSTEM READY</p>
+    </div>
+  </div>
+
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <div class="grid-overlay" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"><span id="cursorLabel"></span></div>
+
+  <header class="site-header" id="header">
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand magnetic" href="#home" aria-label="Vasanth M home">V<span>M</span><i>.</i></a>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#work">Work</a>
+        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#process">Process</a>
+        <a class="nav-link" href="#skills">Skills</a>
+        <a class="nav-link" href="#contact">Contact</a>
+        <button class="nav-command" id="navCommand" type="button"><span>⌘K</span> Command</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section" id="home" aria-labelledby="heroTitle">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="availability"><i></i><span>Available for Projects</span><kbd>Ctrl K</kbd></div>
+          <p class="eyebrow">SOFTWARE ENGINEERING STUDENT · FRONTEND WEB DEVELOPER · FREELANCE DESIGNER</p>
+          <p class="terminal-prompt">&gt; whoami</p>
+          <h1 id="heroTitle">I'm Vasanth M<span class="hero-caret" aria-hidden="true">|</span></h1>
+          <div class="role-line" aria-live="polite"><span id="roleText">Frontend Developer</span></div>
+          <p class="hero-lead">I help individuals, students, startups, and small businesses build clean, responsive, and modern websites. Continuously learning and applying the latest web technologies to create fast, user-friendly digital experiences.</p>
+          <div class="hero-actions">
+            <a class="button primary magnetic" href="#work" data-cursor="VIEW WORK">View My Work <span>↗</span></a>
+            <a class="button ghost magnetic" href="#contact" data-cursor="CONNECT">Let's Connect <span>↗</span></a>
+          </div>
+          <div class="hero-meta" aria-label="Quick facts">
+            <div><strong>2025–29</strong><span>B.Tech CSE</span></div>
+            <div><strong>10+</strong><span>Learning Hours Daily</span></div>
+            <div><strong>∞</strong><span>Curiosity</span></div>
+          </div>
+        </div>
+
+        <div class="hero-stage reveal" data-parallax="0.12">
+          <div class="ambient-code" aria-hidden="true"><span>&lt;/&gt;</span><span>{ }</span><span>JS</span><span>01</span><span>CSS</span></div>
+          <div class="terminal-card" id="terminalCard">
+            <div class="terminal-top"><div class="traffic"><i></i><i></i><i></i></div><span>vasanth@portfolio:~</span><b>ONLINE</b></div>
+            <div class="terminal-body">
+              <p><span class="prompt">$</span> whoami</p><p class="answer">Vasanth M — frontend developer</p>
+              <p><span class="prompt">$</span> focus</p><p class="answer">clean, responsive, modern websites</p>
+              <p><span class="prompt">$</span> stack</p><p class="answer">HTML · CSS · JavaScript · Git</p>
+              <p><span class="prompt">$</span> status</p><p class="answer online">● learning / building / shipping</p>
+              <p class="command-line"><span class="prompt">$</span> <span id="typedCommand">create interfaces</span><b>▋</b></p>
+            </div>
+          </div>
+          <div class="ring ring-one" aria-hidden="true"></div><div class="ring ring-two" aria-hidden="true"></div>
+          <div class="tech-chip chip-one">HTML5</div><div class="tech-chip chip-two">CSS3</div><div class="tech-chip chip-three">JS</div>
+          <div class="scroll-hint"><span></span> SCROLL TO EXPLORE</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Capabilities"><div class="ticker-track"><span>DESIGN</span><b>✦</b><span>CODE</span><b>✦</b><span>MOTION</span><b>✦</b><span>RESPONSIVE</span><b>✦</b><span>PERFORMANCE</span><b>✦</b><span>DESIGN</span><b>✦</b><span>CODE</span><b>✦</b><span>MOTION</span><b>✦</b><span>RESPONSIVE</span></div></section>
+
+    <section class="section work" id="work" aria-labelledby="workTitle">
+      <div class="container">
+        <div class="section-head reveal"><div><p class="eyebrow">01 · SHOWCASE</p><h2 id="workTitle">A project, not just a card.</h2></div><p>My first complete web project, showcasing skills, learning journey, and a passion for modern user experiences.</p></div>
+        <div class="project-browser reveal" id="projectBrowser">
+          <div class="browser-top"><div class="traffic"><i></i><i></i><i></i></div><span class="browser-address">vasanth.dev / projects / 01</span><span class="browser-status">LIVE PREVIEW</span></div>
+          <div class="browser-body">
+            <div class="project-preview" id="projectPreview">
+              <div class="preview-grid"></div><span class="preview-number">01</span>
+              <div class="preview-window"><div class="preview-nav"><b>VM</b><span></span><i></i></div><div class="preview-content"><small>FRONTEND</small><strong>My Portfolio<br>Website</strong><em></em><div class="preview-lines"><i></i><i></i><i></i></div></div></div>
+            </div>
+            <div class="project-info">
+              <div class="project-switcher" role="tablist" aria-label="Projects"><button class="project-tab active" type="button" role="tab" aria-selected="true" data-project="portfolio">01 <span>My Portfolio Website</span></button></div>
+              <span class="project-tag"><i></i> Case Study</span>
+              <h3 id="projectTitle">My Portfolio Website</h3>
+              <p id="projectDescription">My first complete web project, showcasing skills, learning journey, and a passion for modern user experiences.</p>
+              <div class="tech-tags" id="projectTech"><span>HTML5</span><span>Tailwind CSS</span><span>JavaScript</span></div>
+              <p class="project-note">This project reflects my approach to creating clean layouts and responsive designs from scratch. It's a living document of my evolution as a developer.</p>
+              <div class="project-actions"><a class="button small ghost" href="#contact" data-cursor="DETAILS">Project Detail ↗</a></div>
+              <p class="project-disclaimer">No external project URL was present in the supplied source, so no fake Live Demo or GitHub link has been added.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about" aria-labelledby="aboutTitle">
+      <div class="container split">
+        <div class="section-heading reveal"><p class="eyebrow">02 · THE STORY</p><h2 id="aboutTitle">Passionate About Learning <span>& Building.</span></h2>
+          <p class="large">Hello! I'm Vasanth, a Bachelor of Technology student in Computer Science & Engineering. My journey into web development started with a curiosity about how the digital world is constructed, which quickly evolved into a passion for creating it myself.</p>
+          <p>As a student and freelance developer, I bridge the gap between academic rigor and practical agility. I'm committed to providing high-quality code and clear communication, ensuring that every project I touch is delivered with precision and care.</p>
+          <blockquote>"Quality is not an act, it is a habit. I bring this mindset to every line of code I write."</blockquote>
+        </div>
+        <div class="about-terminal reveal">
+          <div class="mini-terminal-head"><span>vasanth@portfolio:~$</span><i>●</i></div>
+          <div class="about-command"><span>$ whoami</span><strong>Vasanth M</strong><small>Frontend Web Developer · CSE Student</small></div>
+          <div class="about-command"><span>$ philosophy</span><strong>Learning • Building • Shipping</strong><small>Keep the interface useful. Keep the motion meaningful.</small></div>
+          <div class="status-card"><div><i></i><span>AVAILABLE FOR PROJECTS</span></div><strong>Building portfolio v2</strong><small id="localTime">Local time — --:--</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section playground" id="playground" aria-labelledby="playgroundTitle">
+      <div class="container">
+        <div class="section-head reveal"><div><p class="eyebrow">03 · THINGS I CAN BUILD</p><h2 id="playgroundTitle">A tiny live playground.</h2></div><p>Edit the safe HTML snippet and see the preview update instantly. It is intentionally lightweight — no framework, no server, no dangerous script execution.</p></div>
+        <div class="playground-grid reveal">
+          <div class="code-editor panel">
+            <div class="panel-head"><span>index.html</span><button type="button" id="resetPlayground">Reset</button></div>
+            <label class="sr-only" for="codeInput">Editable HTML example</label>
+            <textarea id="codeInput" spellcheck="false" aria-describedby="playgroundHelp"><section class="demo-card"><p class="demo-kicker">HELLO</p><h3>Build useful interfaces.</h3><p>Clean HTML. Thoughtful CSS. Meaningful motion.</p></section></textarea>
+            <small id="playgroundHelp">Only a small HTML subset is rendered for the preview.</small>
+          </div>
+          <div class="preview-panel panel"><div class="panel-head"><span>LIVE PREVIEW</span><i>SAFE MODE</i></div><iframe id="previewFrame" title="Live HTML preview" sandbox="allow-same-origin"></iframe></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="process" aria-labelledby="processTitle">
+      <div class="container"><div class="section-heading centered reveal"><p class="eyebrow">04 · THE METHOD</p><h2 id="processTitle">Discuss → Plan → Develop → Launch</h2></div>
+        <div class="process-track" aria-label="Development workflow">
+          <div class="process-line" aria-hidden="true"><span id="processLineFill"></span></div>
+          <article class="process-step reveal"><b>01</b><span class="step-icon">⌁</span><h3>Discuss</h3><p>Gathering requirements and defining project goals.</p></article>
+          <article class="process-step reveal"><b>02</b><span class="step-icon">◫</span><h3>Plan</h3><p>Creating wireframes and choosing the tech stack.</p></article>
+          <article class="process-step reveal"><b>03</b><span class="step-icon">&lt;/&gt;</span><h3>Develop</h3><p>Writing clean, modular code with modern best practices.</p></article>
+          <article class="process-step reveal"><b>04</b><span class="step-icon">↗</span><h3>Launch</h3><p>Reviewing, testing, and deploying to the live web.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills" id="skills" aria-labelledby="skillsTitle">
+      <div class="container"><div class="section-heading centered reveal"><p class="eyebrow">05 · SKILLS</p><h2 id="skillsTitle">What I'm building with.</h2></div>
+        <div class="skill-groups">
+          <div class="skill-group reveal"><div class="group-label">FRONTEND</div><div class="skill-grid">
+            <article class="skill-card" tabindex="0"><span>HTML5</span><small>Semantic structure and accessible markup.</small></article>
+            <article class="skill-card" tabindex="0"><span>CSS3</span><small>Responsive layouts, styling and visual systems.</small></article>
+            <article class="skill-card" tabindex="0"><span>JavaScript</span><small>Interactive UI behaviour and browser APIs.</small></article>
+            <article class="skill-card" tabindex="0"><span>Responsive Design</span><small>Layouts that adapt across screen sizes.</small></article>
+            <article class="skill-card" tabindex="0"><span>UI Animation</span><small>Intentional motion using CSS and JavaScript.</small></article>
+            <article class="skill-card" tabindex="0"><span>Git & GitHub</span><small>Version control and project workflow.</small></article>
+          </div></div>
+          <div class="skill-group learning reveal"><div class="group-label">CURRENTLY LEARNING</div><div class="skill-grid">
+            <article class="skill-card" tabindex="0"><span>React</span><small>Component-based UI structures.</small></article>
+            <article class="skill-card" tabindex="0"><span>TypeScript</span><small>Safer, typed JavaScript development.</small></article>
+            <article class="skill-card" tabindex="0"><span>Next.js</span><small>Modern React application architecture.</small></article>
+            <article class="skill-card" tabindex="0"><span>GSAP</span><small>Exploring advanced motion and ScrollTrigger.</small></article>
+          </div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section value" aria-labelledby="valueTitle">
+      <div class="container"><div class="section-heading centered reveal"><p class="eyebrow">06 · THE VALUE</p><h2 id="valueTitle">Why work with me?</h2></div>
+        <div class="value-grid"><article class="value-card reveal"><b>01</b><h3>Dedicated Learner</h3><p>Constantly updating skills with the newest web standards and frameworks.</p></article><article class="value-card reveal"><b>02</b><h3>Affordable Pricing</h3><p>High-quality professional web solutions tailored for student and startup budgets.</p></article><article class="value-card reveal"><b>03</b><h3>Responsive Design</h3><p>Ensuring your website looks and functions perfectly on all screen sizes and devices.</p></article><article class="value-card reveal"><b>04</b><h3>Clear Communication</h3><p>Regular updates and transparent dialogue throughout the entire development cycle.</p></article><article class="value-card reveal"><b>05</b><h3>Attention to Detail</h3><p>Precise execution of design requirements with a focus on code cleanliness.</p></article><article class="value-card reveal"><b>06</b><h3>On-Time Delivery</h3><p>Reliable project management ensuring your site launches exactly when promised.</p></article></div>
+      </div>
+    </section>
+
+    <section class="section faq" aria-labelledby="faqTitle"><div class="container"><div class="section-heading centered reveal"><p class="eyebrow">07 · ANSWERS</p><h2 id="faqTitle">Common Questions</h2></div><div class="faq-list reveal">
+      <details open><summary>What experience do you have?<span>⌄</span></summary><p>I am a B.Tech CSE student with foundational projects in frontend development. I have successfully completed freelance tasks for small clients and am currently building my professional portfolio.</p></details>
+      <details><summary>What types of websites can you build?<span>⌄</span></summary><p>I build personal portfolios, business landing pages, small e-commerce fronts, and interactive web applications using modern HTML, CSS, and JavaScript.</p></details>
+      <details><summary>Are the websites mobile-friendly?<span>⌄</span></summary><p>Yes — every project is built mobile-first and tested across screen sizes, so your site looks and works great on phones, tablets, and desktops alike.</p></details>
+    </div></div></section>
+
+    <section class="section contact" id="contact" aria-labelledby="contactTitle">
+      <div class="container contact-grid">
+        <div class="contact-copy reveal"><p class="eyebrow">08 · GET IN TOUCH</p><h2 id="contactTitle">READY TO BUILD<br><span>SOMETHING?</span></h2><p>Let's work together on a clean, responsive web experience.</p>
+          <div class="contact-details">
+            <a href="mailto:vasanthm1504@gmail.com" data-cursor="EMAIL"><small>EMAIL ME</small><strong>vasanthm1504@gmail.com ↗</strong></a>
+            <a href="tel:+917604838719" data-cursor="CALL"><small>CALL ME</small><strong>+91 7604838719 ↗</strong></a>
+            <div><small>LOCATION</small><strong>Tamil Nadu, India</strong></div>
+            <a href="https://www.linkedin.com/in/vasanth1504" target="_blank" rel="noopener noreferrer" data-cursor="LINKEDIN"><small>LINKEDIN</small><strong>vasanth1504 ↗</strong></a>
+          </div>
+        </div>
+        <form class="contact-form panel reveal" id="inquiryForm">
+          <div class="form-heading"><span>NEW INQUIRY</span><i>SECURE CHANNEL</i></div>
+          <div class="form-row"><label>Full Name<input type="text" name="name" placeholder="John Doe" autocomplete="name" required></label><label>Email Address<input type="email" name="email" placeholder="john@example.com" autocomplete="email" required></label></div>
+          <div class="form-row"><label>Phone Number<input type="tel" name="phone" placeholder="+91 00000 00000" autocomplete="tel"></label><label>Project Type<select name="projectType"><option>Personal Portfolio</option><option>Business Website</option><option>E-commerce Store</option><option>Web Application</option><option>Other</option></select></label></div>
+          <label>Project Details<textarea name="details" rows="5" placeholder="Tell me about your project vision..."></textarea></label>
+          <button class="button primary" type="submit" id="submitBtn">Send Inquiry <span>↗</span></button><p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-main"><div><a class="brand" href="#home">V<span>M</span><i>.</i></a><p>Frontend Developer · CSE Student</p></div><div class="footer-center">DESIGN · CODE · MOTION · PERFORMANCE</div><a class="footer-talk" href="#contact" data-cursor="LET'S TALK">LET'S TALK ↗</a></div>
+    <div class="container footer-bottom"><span>© 2026 Vasanth M</span><button type="button" id="backTop">Back to top ↑</button><button type="button" id="footerCommand">Ctrl / ⌘ K</button></div>
+  </footer>
+
+  <div class="terminal-dock" id="terminalDock" aria-hidden="true">
+    <div class="dock-backdrop" data-close-terminal></div>
+    <div class="terminal-shell" role="dialog" aria-modal="true" aria-labelledby="terminalTitle">
+      <div class="terminal-shell-head"><span id="terminalTitle">vasanth@portfolio:~$</span><button type="button" data-close-terminal aria-label="Close terminal">×</button></div>
+      <div class="terminal-output" id="terminalOutput"></div>
+      <form id="terminalForm" class="terminal-input-row"><label for="terminalInput">$</label><input id="terminalInput" autocomplete="off" spellcheck="false" aria-label="Terminal command"></form>
+    </div>
+  </div>
+
+  <div class="command-palette" id="commandPalette" aria-hidden="true">
+    <div class="palette-backdrop" data-close-palette></div>
+    <div class="palette" role="dialog" aria-modal="true" aria-labelledby="paletteTitle">
+      <div class="palette-top"><span>⌘</span><label class="sr-only" for="commandInput">Search portfolio</label><input id="commandInput" placeholder="Search Vasanth.dev..." autocomplete="off"><kbd>ESC</kbd></div>
+      <div class="command-list" id="commandList">
+        <button type="button" data-target="#home"><span>⌂</span><b>Home</b><kbd>1</kbd></button>
+        <button type="button" data-target="#work"><span>◈</span><b>Projects</b><kbd>2</kbd></button>
+        <button type="button" data-target="#about"><span>◎</span><b>About</b><kbd>3</kbd></button>
+        <button type="button" data-target="#process"><span>↳</span><b>Process</b><kbd>4</kbd></button>
+        <button type="button" data-target="#skills"><span>◇</span><b>Skills</b><kbd>5</kbd></button>
+        <button type="button" data-target="#contact"><span>↗</span><b>Contact</b><kbd>6</kbd></button>
+        <button type="button" data-action="terminal"><span>›_</span><b>Open terminal</b><kbd>7</kbd></button>
+      </div>
+      <small id="paletteTitle">↑ ↓ navigate · Enter select · Esc close</small>
+    </div>
+  </div>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
